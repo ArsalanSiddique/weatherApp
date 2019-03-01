@@ -1,0 +1,20 @@
+<% include header %>
+
+    
+    <% if(weather !== null) { %>
+        <h1 class="temp">It is <%= temperature %>&#8451; in <%= city %>.</h1>
+    <% } %>
+    
+    <% if(error !== null) { %>
+        <h1 class="error"><%= error %></h1>
+    <% } %>
+
+
+
+    <form action="/" method="POST" class="form-group col-lg-3">
+        <input type="text" class="form-control txtbox" name="city" placeholder="Enter City Name" required/>
+        <input type="submit" class="btn btn-primary" value="Go" />
+    </form>
+
+
+<% include footer %>
